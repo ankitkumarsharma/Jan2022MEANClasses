@@ -1,0 +1,61 @@
+<p [ngClass]="{'red-alert':red_flag}">home works!</p>
+<p [ngStyle]="{'color': colorGreen}">color change</p>
+<button class="primary-btn" (click)="Toggle()">Toggle</button>
+
+
+<p *ngIf="obj.name == 'Ankit'">It is showing {{name}}</p>
+
+<!-- <table>
+    <tr>
+        <th>
+            Sr.No.
+        </th>
+        <th>
+            Id
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            Body
+        </th>
+    </tr>
+    <tr *ngFor="let item of arrObj;let i=index;">
+        <td>
+            {{i+1}}
+        </td>
+        <td>
+            {{item.id}}
+        </td>
+        <td>
+            {{item.title}}
+        </td>
+        <td>
+            {{item.body}}
+        </td>
+    </tr>
+</table> -->
+
+<input type="text" [(ngModel)]="conditionExpression">
+
+<div [ngSwitch]="conditionExpression">
+    <div *ngSwitchCase="'1'">output 1</div>
+    <div *ngSwitchCase="'2'">2nd</div>
+    <div *ngSwitchCase="'3'">Third</div>
+    <div *ngSwitchCase="'4'">Fourth</div>
+    <div *ngSwitchDefault>Default case</div>
+</div>
+
+Date: {{todayDate | date}}
+
+<p>{{'ankit' | uppercase}}</p>
+<p>{{'ANKIT' | lowercase}}</p>
+<p>{{ 3333 | currency:'INR'}}</p>
+
+<p>Cube: {{3 | cube}}</p>
+
+<p>{{'hgghhh' | customName}}</p>
+
+<pre>
+    {{arrObj | json}}
+</pre>

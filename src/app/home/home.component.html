@@ -59,3 +59,16 @@ Date: {{todayDate | date}}
 <pre>
     {{arrObj | json}}
 </pre>
+
+<p>-----------------------------------</p>
+<p>{{'Ankit' | desc : 'Sharma'}}</p>
+<ul>
+    <li *ngFor="let item of nameArr">
+        {{item.name | desc : item.sirName}}
+    </li>
+</ul>
+
+{{336 | cube : 600}}
+
+<button class="btn" (click)="showValue()">ShowValue</button>
+<p>{{nameValue}}</p>

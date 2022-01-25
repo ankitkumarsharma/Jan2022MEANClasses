@@ -1,3 +1,4 @@
+import { AppService } from './../_services/app.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -46,15 +47,31 @@ export class HomeComponent implements OnInit {
   ]
   colorGreen:string = 'green';
   todayDate = new Date();
+  nameArr:any;
+  // [
+  //   {name:'Rahul', sirName:'Kumar'},
+  //   {name:'Aditya', sirName:'Patel'},
+  //   {name:'Ankit', sirName:'Sharma'},
+  //   {name:'Manish', sirName:'Sharma'},
+  //   {name:'Rahul', sirName:'Jogrge'},
+  //   {name:'Manohar', sirName:'Kumar'},
 
-  constructor() { }
+  // ]
+  nameValue:string = 'No Friends'
+  constructor(private appService:AppService) { } // inject service
 
   ngOnInit(): void {
-
+    this.appService.getJson().subscribe((item)=>{
+      this.nameArr = item;
+    })
   }
   Toggle(){
     this.red_flag = !this.red_flag;
     this.colorGreen = '#ff0000';
+  }
+  showValue(){
+    this.nameValue = this.appService.openDesc();
+    
   }
 }
 

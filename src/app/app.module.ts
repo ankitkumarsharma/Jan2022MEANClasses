@@ -13,6 +13,8 @@ import { P2Component } from './product/p2/p2.component';
 import { P3Component } from './product/p3/p3.component';
 import { DescPipe } from './pipes/desc.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { ParentInputComponent } from './component-interaction/input/parent-input/parent-input.component';
+import { ChildInputComponent } from './component-interaction/input/child-input/child-input.component'; 
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
     P1Component,
     P2Component,
     P3Component,
-    DescPipe
+    DescPipe,
+    ParentInputComponent,
+    ChildInputComponent,
   ],
   imports: [
     BrowserModule,

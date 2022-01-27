@@ -1,3 +1,5 @@
+import { ViewchildC1Component } from './component-interaction/view-child/viewchild-c1/viewchild-c1.component';
+import { OutputC1Component } from './component-interaction/output/output-c1/output-c1.component';
 import { ChildInputComponent } from './component-interaction/input/child-input/child-input.component';
 import { ParentInputComponent } from './component-interaction/input/parent-input/parent-input.component';
 import { P1Component } from './product/p1/p1.component';
@@ -19,6 +21,8 @@ const routes: Routes = [
   ]},
   {path:'input', component: ParentInputComponent},
   {path:'inputChild', component: ChildInputComponent},
+  {path:'output', component: OutputC1Component},
+  {path:'viewchild', component: ViewchildC1Component},
   {path:'**', component:PageNotFoundComponent},
 ];
 

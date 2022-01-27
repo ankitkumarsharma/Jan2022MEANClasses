@@ -14,7 +14,11 @@ import { P3Component } from './product/p3/p3.component';
 import { DescPipe } from './pipes/desc.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { ParentInputComponent } from './component-interaction/input/parent-input/parent-input.component';
-import { ChildInputComponent } from './component-interaction/input/child-input/child-input.component'; 
+import { ChildInputComponent } from './component-interaction/input/child-input/child-input.component';
+import { OutputC1Component } from './component-interaction/output/output-c1/output-c1.component';
+import { OutputC2Component } from './component-interaction/output/output-c2/output-c2.component';
+import { ViewchildC1Component } from './component-interaction/view-child/viewchild-c1/viewchild-c1.component';
+import { ViewchildC2Component } from './component-interaction/view-child/viewchild-c2/viewchild-c2.component'; 
 
 
 @NgModule({
@@ -30,6 +34,10 @@ import { ChildInputComponent } from './component-interaction/input/child-input/c
     DescPipe,
     ParentInputComponent,
     ChildInputComponent,
+    OutputC1Component,
+    OutputC2Component,
+    ViewchildC1Component,
+    ViewchildC2Component,
   ],
   imports: [
     BrowserModule,

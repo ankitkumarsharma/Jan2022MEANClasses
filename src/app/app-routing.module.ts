@@ -1,3 +1,4 @@
+import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 import { ViewchildC1Component } from './component-interaction/view-child/viewchild-c1/viewchild-c1.component';
 import { OutputC1Component } from './component-interaction/output/output-c1/output-c1.component';
 import { ChildInputComponent } from './component-interaction/input/child-input/child-input.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:'inputChild', component: ChildInputComponent},
   {path:'output', component: OutputC1Component},
   {path:'viewchild', component: ViewchildC1Component},
+  {path:'forms', component: ReactiveFormsComponent},
   {path:'**', component:PageNotFoundComponent},
 ];
 

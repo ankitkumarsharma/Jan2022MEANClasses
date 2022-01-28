@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +18,9 @@ import { ChildInputComponent } from './component-interaction/input/child-input/c
 import { OutputC1Component } from './component-interaction/output/output-c1/output-c1.component';
 import { OutputC2Component } from './component-interaction/output/output-c2/output-c2.component';
 import { ViewchildC1Component } from './component-interaction/view-child/viewchild-c1/viewchild-c1.component';
-import { ViewchildC2Component } from './component-interaction/view-child/viewchild-c2/viewchild-c2.component'; 
+import { ViewchildC2Component } from './component-interaction/view-child/viewchild-c2/viewchild-c2.component';
+import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
+import { TemplateFormsComponent } from './forms/template-forms/template-forms.component'; 
 
 
 @NgModule({
@@ -38,12 +40,15 @@ import { ViewchildC2Component } from './component-interaction/view-child/viewchi
     OutputC2Component,
     ViewchildC1Component,
     ViewchildC2Component,
+    ReactiveFormsComponent,
+    TemplateFormsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

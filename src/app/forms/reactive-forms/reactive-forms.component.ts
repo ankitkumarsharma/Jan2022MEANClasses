@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -16,22 +16,44 @@ export class ReactiveFormsComponent implements OnInit {
     {label:'Commerce', value: 'COM'},
     {label:'Dancing', value: 'DAN'},
   ]
+  dataArr:any = [];
+  submitted:boolean = false;
   constructor(private _fb:FormBuilder) { }
 
   ngOnInit(): void {
     this.regForm = this._fb.group({
-      'firstName': '',
+      'firstName': ['', Validators.required],
       'lastName':'',
-      'email':'',
-      'password':'',
+      'email':['', [Validators.required, Validators.email]],
+      'password':[''],
       'dob':'',
       'profilePic':'',
       'studyArea':''
+    });
+    // this.regFormSetValue();
+    // this.regForm.controls['firstName'].patchValue('ankit');
+  }
+  get form(){
+    return this.regForm.controls;
+  }
+  regFormSetValue(){
+    // this.regForm.setValue({
+      this.regForm.patchValue({
+      'firstName': 'aaa',
+      'lastName':'bbb',
     })
   }
   onSubmitForm(){
-    console.log(this.regForm);
-    this.formDataValue = this.regForm.value;
+    this.submitted = true;
+    if(this.regForm.valid){
+      this.submitted = false;
+      console.log(this.regForm);
+      this.dataArr.push(this.regForm.value);
+      this.formDataValue = this.regForm.value;
+    } else {
+      this.submitted = true;
+      this.regForm.markAllAsTouched();
+    }
   }
   onStudyAreaChange(event:any){
     console.log(event.target.value)

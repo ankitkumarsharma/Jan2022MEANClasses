@@ -3,6 +3,9 @@
     <div>
         <label for="">First Name</label>
         <input type="text" formControlName="firstName">
+        <div class="error" *ngIf="submitted && form.firstName.errors">
+            This field is required
+        </div>
     </div>
     <div>
         <label for="">Last Name</label>
@@ -11,6 +14,14 @@
     <div>
         <label for="">Email Id</label>
         <input type="email" formControlName="email">
+        <div class="error" *ngIf="submitted && form.email.errors">
+            <p *ngIf="form.email.errors?.required">
+                This field is required
+            </p>
+            <p *ngIf="form.email.errors?.email">
+                This field is email format
+            </p>
+        </div>
     </div>
     <div>
         <label for="">Password</label>
@@ -31,6 +42,9 @@
         </select>
     </div>
     <button (click)="onSubmitForm()" class="btn" type="submit">Submit</button>
+    <button (click)="regFormSetValue()" class="btn" type="button">Fill Value</button>
 </form>
 
-{{formDataValue | json}}
+<pre>
+    {{dataArr | json}}
+</pre>

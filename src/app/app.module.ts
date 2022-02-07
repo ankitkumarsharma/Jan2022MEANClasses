@@ -20,7 +20,8 @@ import { OutputC2Component } from './component-interaction/output/output-c2/outp
 import { ViewchildC1Component } from './component-interaction/view-child/viewchild-c1/viewchild-c1.component';
 import { ViewchildC2Component } from './component-interaction/view-child/viewchild-c2/viewchild-c2.component';
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
-import { TemplateFormsComponent } from './forms/template-forms/template-forms.component'; 
+import { TemplateFormsComponent } from './forms/template-forms/template-forms.component';
+import { LoginComponent } from './login/login.component'; 
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { TemplateFormsComponent } from './forms/template-forms/template-forms.co
     ViewchildC2Component,
     ReactiveFormsComponent,
     TemplateFormsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

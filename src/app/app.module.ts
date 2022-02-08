@@ -21,7 +21,8 @@ import { ViewchildC1Component } from './component-interaction/view-child/viewchi
 import { ViewchildC2Component } from './component-interaction/view-child/viewchild-c2/viewchild-c2.component';
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 import { TemplateFormsComponent } from './forms/template-forms/template-forms.component';
-import { LoginComponent } from './login/login.component'; 
+import { LoginComponent } from './login/login.component';
+import { SessionComponent } from './session/session.component'; 
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsComponent,
     TemplateFormsComponent,
     LoginComponent,
+    SessionComponent,
   ],
   imports: [
     BrowserModule,

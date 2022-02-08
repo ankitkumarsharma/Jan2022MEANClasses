@@ -1,3 +1,4 @@
+import { SessionComponent } from './session/session.component';
 import { LoginComponent } from './login/login.component';
 import { A1Component } from './simple-module/a1/a1.component';
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path:'viewchild', component: ViewchildC1Component},
   {path:'forms', component: ReactiveFormsComponent},
   {path:'a1', component: A1Component},
+  {path:'session', component: SessionComponent},
   { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
   {path:'**', component:PageNotFoundComponent},
 ];

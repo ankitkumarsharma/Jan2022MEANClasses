@@ -22,4 +22,12 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create toggle', () => {
+    expect(component.red_flag).toBe(false);
+    expect(component.colorGreen).toBe('#ffffff');
+    component.Toggle();
+    expect(component.red_flag).toBeTruthy();
+    expect(component.colorGreen).toBeTruthy();
+  });
 });

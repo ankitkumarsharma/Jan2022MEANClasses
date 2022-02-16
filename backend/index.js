@@ -1,34 +1,16 @@
-var http = require('http');
-var url = require('url');
-var nodeEmail = require('nodemailer');
-// server create
-http.createServer(function(req,res){
-    res.writeHead(200, {'Content-Type':'text/html'});
-    var query1 = url.parse(req.url, true).query;
-    var content = query1.abc + " "+query1.xyz;
-    res.end(content);
-}).listen(8080);
-console.log('Server running')
+// add express js module
+var express = require('express');
+var app = express();
 
-var emailManage = nodeEmail.createTransport({
-    service: 'gmail',
-    auth: {
-        user: 'abc@gmail.com',
-        pass:'12345'
-    }
+var hello = require('./hello.js');
+
+app.use('/hello', hello);
+// send data // app.get(route,callback)
+app.get('/', function(req,res){
+    res.send("helllll");
 });
 
-var emailOptions = {
-    from: 'abc@gmail.com',
-    to: 'aks.computerexpert@gmail.com',
-    subject:'ABC XYZ',
-    text: 'content'
-};
-
-emailManage.sendMail(emailOptions, (err, info)=>{
-    if(err){
-        console.log(err)
-    } else {
-        console.log("Email sent", info.response);
-    }
-})
+// listing server
+app.listen(3000, ()=>{
+    console.log('Server is running')
+});

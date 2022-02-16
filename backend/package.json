@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.2",
     "http": "0.0.1-security",
     "nodemailer": "^6.7.2",
     "url": "^0.11.0"
